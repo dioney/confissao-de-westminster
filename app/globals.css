@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 31, 41, 55; /* text-light */
+  --background-rgb: 255, 255, 255; /* background-light */
+}
+
+.dark {
+  --foreground-rgb: 243, 244, 246; /* text-dark */
+  --background-rgb: 17, 24, 39; /* background-dark */
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+}
+
+/* Estilos adicionais para melhorar a experiência mobile */
+@media (max-width: 640px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+/* Melhorar a legibilidade do texto */
+p {
+  line-height: 1.7;
+}
+
+/* Transições mais rápidas para o modo escuro */
+* {
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+/* Remover transição para alguns elementos específicos para tornar a mudança instantânea */
+.instant-theme-change {
+  transition: none;
+} 
